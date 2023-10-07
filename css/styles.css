@@ -11,6 +11,17 @@ body {
     margin: 0px; /* Remove default margin */
     padding: 0px; /* Remove default padding */
 }
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.aspect-ratio-container {
+    position: relative;
+    width: 100%;
+    /* padding-top: 56.25%;  */
+    overflow: auto; /* Make content scrollable */
+}
 .title {
     text-align: center;
     font-size: 950%;
