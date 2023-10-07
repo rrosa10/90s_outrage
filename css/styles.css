@@ -2,197 +2,141 @@ canvas {
     border: 1px solid black;
 }
 
+
 body {
     background-image: url('../media/images/1000_F_278490728_m8kjSGy7JeiSYbjv7CH8TOtHw9HvrNfT.jpg'); 
     background-repeat: repeat;
     background-size: 150px, 150px;
     color: white;
+    margin: 0px; /* Remove default margin */
+    padding: 0px; /* Remove default padding */
+}
+.title {
+    text-align: center;
+    font-size: 950%;
+    margin-top: 10px; /* Adjust top margin as needed */
+    font-family: 'VT323', monospace;
 }
 
 .image_container {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    padding: 20px; /* Add padding for spacing */
+    padding: 500px; /* Add padding for spacing */
 }
-
-/* ===========Doom============== */
-.doom:hover {
-    opacity: 0;
-}
-.doom {
-    width: 350px;
-    height: 350px;
-    object-fit: contain;
-    position: absolute;
-    top: 150px;
-    left: 50px;
+.doom, .wolf, .mk {
+    width: 30%; /* Adjust as needed */
+    height: 42%; /* Maintain aspect ratio */
+    top: 10%; /* Adjust top position */
+    left: 10%; /* Adjust left position */
     border-width: 10px;
     border-style: groove;
-    Border-color: silver;
+    border-color: silver;
     z-index: 1;
     transition: opacity 2s;
-}
-.doom_quote {
+    max-width: 20%;
+    max-height: 45%;
     position: absolute;
-    top: 150px;
-    left: 50px;
+    order: 1;
+}
+.doom_quote, .wolf_quote, .mk_quote, .nt_quote {
+    position: absolute;
+    top: 10%; /* Adjust top position */
+    left: 10%; /* Adjust left position */
     background-color: rgba(255, 255, 255, 0.804);
     padding: 12px;
     border-radius: 5px;
-    color: black; /* Text color */
-    z-index: 0; /* Place it behind the images */
-    width: 350px;
-    height: 350px;
-    font-size: 26px;
-}
-
-.doom_button{
-    background-color: rgb(219, 59, 1);
-    color: white;
-    text-align: center;
-    padding: 15px 20px;
-    font-size: 20px;
-    position: absolute;
-    top: 540px;
-    left: 105px;
-}
-.doom_button:hover{
-    background-color: rgb(130, 36, 2);
-    color: white;
-}
-
-/* ===========Wolfenstien============== */
-.wolf:hover{
-    opacity: 0;
-}
-.wolf{
-    width: 350px;
-    height: 350px;
-    position: absolute;
-    top: 150px;
-    left: 550px;
-    border-width: 10px;
-    border-style: groove;
-    Border-color: silver;
-    z-index: 1; /* Place image1 above image2 */
-    transition: opacity 2s;
-}
-.wolf_quote {
-    position: absolute;
-    top: 150px;
-    left: 550px;
-    background-color: rgba(255, 255, 255, 0.804);
-    padding: 10px;
-    border-radius: 5px;
-    color: black; /* Text color */
-    z-index: 0; /* Place it behind the images */
-    width: 350px;
-    height: 350px;
+    color: black;
+    z-index: 0;
+    width: 30%; /* Adjust as needed */
+    height: 40%; /* Maintain aspect ratio */
+    max-width: 19.5%;
+    max-height: 60%;
     font-size: 26px;
     font-family: cursive;
 }
-.wolf_button{
+
+.doom_button, .mk_button, .wolf_button, .nt_button{
     background-color: rgb(219, 59, 1);
     color: white;
     text-align: center;
-    padding: 15px 20px;
+    padding: 1% .5%;
     font-size: 20px;
     position: absolute;
-    top: 540px;
-    left: 605px;
+    top: 540px; /* Adjust top position */
+    left: 105px; /* Adjust left position */
 }
-.wolf_button:hover{
+.doom_button:hover, .mk_button:hover, .wolf_button:hover, .nt_button:hover{
     background-color: rgb(130, 36, 2);
     color: white;
 }
 
-/* ===========MK============== */
-.mk:hover{
-    opacity: 0;
-}
-.mk{
-    width: 350px;
-    height: 350px;
-    position: absolute;
-    top: 150px;
-    left: 1050px;
-    border-width: 10px;
-    border-style: groove;
-    Border-color: silver;
-    z-index: 1; /* Place image1 above image2 */
-    transition: opacity 2s;
-}
-.mk_quote {
-    position: absolute;
-    top: 150px;
-    left: 1050px;
-    background-color: rgba(255, 255, 255, 0.804);
-    padding: 10px;
-    border-radius: 5px;
-    color: black; /* Text color */
-    z-index: 0; /* Place it behind the images */
-    width: 350px;
-    height: 350px;
-    font-size: 26px;
-    font-family: cursive;
-}
-.mk_button{
-    background-color: rgb(219, 59, 1);
-    color: white;
-    text-align: center;
-    padding: 15px 20px;
-    font-size: 20px;
-    position: absolute;
-    top: 540px;
-    left: 1105px;
-}
-.mk_button:hover{
-    background-color: rgb(130, 36, 2);
-    color: white;
-}
-
-.nt:hover{
-    opacity: 0;
-}
 .nt{
-    width: 350px;
-    height: 450px;
-    position: absolute;
-    top: 690px;
-    left: 550px;
+    width: 30%; /* Adjust as needed */
+    height: 100%; /* Maintain aspect ratio */
+    top: 10%; /* Adjust top position */
+    left: 10%; /* Adjust left position */
     border-width: 10px;
     border-style: groove;
-    Border-color: silver;
-    z-index: 1; /* Place image1 above image2 */
+    border-color: silver;
+    z-index: 1;
     transition: opacity 2s;
-}
-.nt_quote {
+    max-width: 20%;
+    max-height: 50%;
     position: absolute;
-    top: 690px;
-    left: 550px;
-    background-color: rgba(255, 255, 255, 0.804);
-    padding: 10px;
-    border-radius: 5px;
-    color: black; /* Text color */
-    z-index: 0; /* Place it behind the images */
-    width: 350px;
-    height: 450px;
-    font-size: 26px;
-    font-family: cursive;
+    order: 1;
 }
-.nt_button{
-    background-color: rgb(219, 59, 1);
-    color: white;
-    text-align: center;
-    padding: 15px 20px;
-    font-size: 20px;
-    position: absolute;
-    top: 1185px;
-    left: 605px;
+.doom:hover, .wolf:hover, .mk:hover, .nt:hover{
+    opacity: 0;
 }
-.nt_button:hover{
-    background-color: rgb(130, 36, 2);
-    color: white;
+
+@media (min-width: 768px) {
+    /* Adjust the layout for larger screens */
+    .doom, .doom_quote {
+        width: 80%; /* Adjust for smaller screens */
+        top: 20%; /* Adjust top position for smaller screens */
+        left: 5%; /* Adjust left position for smaller screens */
+    }
+
+    .wolf, .wolf_quote{
+        width: 80%; /* Adjust for smaller screens */
+        top: 20%; /* Adjust top position for smaller screens */
+        left: 40%; /* Adjust left position for smaller screens */
+    }
+
+    .mk, .mk_quote{
+        width: 80%; /* Adjust for smaller screens */
+        top: 20%; /* Adjust top position for smaller screens */
+        left: 72%; /* Adjust left position for smaller screens */
+    }
+
+    .nt, .nt_quote{
+        width: 80%; /* Adjust for smaller screens */
+        top: 78%; /* Adjust top position for smaller screens */
+        left: 40%; /* Adjust left position for smaller screens */
+    }
+
+    .doom_button {
+        top: 67%; /* Adjust top position for larger screens */
+        left:9%; /* Adjust left position for larger screens */
+    }
+
+    .wolf_button{
+        top: 67%; /* Adjust top position for larger screens */
+        left: 44%; /* Adjust left position for larger screens */
+    }
+
+    .mk_button{
+        top: 67%; /* Adjust top position for larger screens */
+        left: 76%; /* Adjust left position for larger screens */
+    }
+
+    .nt_button{
+        top: 133%;
+        left: 44%
+    }
+
 }
+
 
