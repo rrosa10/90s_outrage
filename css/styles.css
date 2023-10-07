@@ -149,7 +149,7 @@ body, html {
 
     .doom_button {
         top: 67%; /* Adjust top position for larger screens */
-        left: 2%; /* Adjust left position for larger screens */
+        left: 3%; /* Adjust left position for larger screens */
     }
 
     .wolf_button{
