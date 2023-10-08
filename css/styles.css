@@ -1,15 +1,13 @@
 canvas {
     border: 1px solid black;
 }
-
-
 body {
     background-image: url('../media/images/1000_F_278490728_m8kjSGy7JeiSYbjv7CH8TOtHw9HvrNfT.jpg'); 
     background-repeat: repeat;
     background-size: 150px, 150px;
     color: white;
-    margin: 0px; /* Remove default margin */
-    padding: 0px; /* Remove default padding */
+    margin: 0px; 
+    padding: 0px; 
     
 }
 body, html {
@@ -20,13 +18,14 @@ body, html {
 .aspect-ratio-container {
     position: relative;
     width: 100%;
-    overflow: auto; /* Make content scrollable */
+    overflow: auto; 
 }
 .title {
     text-align: center;
     font-size: 950%;
-    margin-top: 10px; /* Adjust top margin as needed */
+    margin-top: 10px; 
     font-family: 'VT323', monospace;
+    
 }
 
 .image_container {
@@ -34,13 +33,13 @@ body, html {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 500px; /* Add padding for spacing */
+    padding: 500px; 
 }
 .doom, .wolf, .mk {
-    width: 30%; /* Adjust as needed */
-    height: 42%; /* Maintain aspect ratio */
-    top: 10%; /* Adjust top position */
-    left: 10%; /* Adjust left position */
+    width: 30%; 
+    height: 43%; 
+    top: 10%; 
+    left: 10%; 
     border-width: 10px;
     border-style: groove;
     border-color: silver;
@@ -53,15 +52,15 @@ body, html {
 }
 .doom_quote, .wolf_quote, .mk_quote, .nt_quote {
     position: absolute;
-    top: 10%; /* Adjust top position */
-    left: 10%; /* Adjust left position */
+    top: 10%; 
+    left: 10%; 
     background-color: rgb(255, 255, 255);
     padding: 12px;
     border-radius: 5px;
     color: black;
     z-index: 0;
-    width: 30%; /* Adjust as needed */
-    height: 40.5%; /* Maintain aspect ratio */
+    width: 30%; 
+    height: 40.5%; 
     max-width: 19.5%;
     max-height: 60%;
     font-size: 30px;
@@ -72,13 +71,14 @@ body, html {
     padding: 2px 2px 2px;
     border: 0px;
     border-radius: 3px;
-    background-color: rgba(107, 89, 85, 0);
+    background-color: rgb(255, 128, 0);
     color: rgb(250, 250, 250);
     text-align: center;
-    font-size: 35px;
+    font-size: 155%;
+    font-family: 'VT323', monospace;
     position: absolute;
-    top: 540px; /* Adjust top position */
-    left: 105px; /* Adjust left position */
+    top: 540px; 
+    left: 105px; 
 }
 .doom_button:hover, .mk_button:hover, .wolf_button:hover, .nt_button:hover{
     background-color: rgb(190, 52, 2);
@@ -86,10 +86,10 @@ body, html {
 }
 
 .nt{
-    width: 30%; /* Adjust as needed */
-    height: 100%; /* Maintain aspect ratio */
-    top: 10%; /* Adjust top position */
-    left: 10%; /* Adjust left position */
+    width: 30%; 
+    height: 100%; 
+    top: 10%; 
+    left: 10%; 
     border-width: 10px;
     border-style: groove;
     border-color: silver;
@@ -102,15 +102,15 @@ body, html {
 }
 .nt_quote{
     position: absolute;
-    top: 10%; /* Adjust top position */
-    left: 10%; /* Adjust left position */
+    top: 10%; 
+    left: 10%; 
     background-color: rgb(255, 255, 255);
     padding: 12px;
     border-radius: 5px;
     color: black;
     z-index: 0;
-    width: 30%; /* Adjust as needed */
-    height: 49.5%; /* Maintain aspect ratio */
+    width: 30%; 
+    height: 49.5%; 
     max-width: 19.5%;
     max-height: 60%;
     font-size: 30px;
@@ -121,50 +121,57 @@ body, html {
 }
 
 @media (min-width: 768px) {
-    /* Adjust the layout for larger screens */
     .doom, .doom_quote {
-        width: 80%; /* Adjust for smaller screens */
-        top: 20%; /* Adjust top position for smaller screens */
-        left: 5%; /* Adjust left position for smaller screens */
+        width: 80%; 
+        top: 20%; 
+        left: 15%;
+        transform: translateX(-50%); 
     }
 
     .wolf, .wolf_quote{
-        width: 80%; /* Adjust for smaller screens */
-        top: 20%; /* Adjust top position for smaller screens */
-        left: 40%; /* Adjust left position for smaller screens */
+        width: 80%;
+        top: 20%; 
+        left: 50%;
+        transform: translateX(-50%); 
     }
 
     .mk, .mk_quote{
-        width: 80%; /* Adjust for smaller screens */
-        top: 20%; /* Adjust top position for smaller screens */
-        left: 72%; /* Adjust left position for smaller screens */
+        width: 80%; 
+        top: 20%; 
+        left: 85%;
+        transform: translateX(-50%); 
     }
 
     .nt, .nt_quote{
         
-        width: 80%; /* Adjust for smaller screens */
-        top: 78%; /* Adjust top position for smaller screens */
-        left: 40%; /* Adjust left position for smaller screens */
+        width: 80%; 
+        top: 78%; 
+        left: 50%; 
+        transform: translateX(-50%); 
     }
 
     .doom_button {
-        top: 67%; /* Adjust top position for larger screens */
-        left: 3%; /* Adjust left position for larger screens */
+        top: 67%; 
+        left: 15%; 
+        transform: translateX(-50%); 
     }
 
     .wolf_button{
-        top: 67%; /* Adjust top position for larger screens */
-        left: 37%; /* Adjust left position for larger screens */
+        top: 67%; 
+        left: 50%;
+        transform: translateX(-50%); 
     }
 
     .mk_button{
-        top: 67%; /* Adjust top position for larger screens */
-        left: 72%; /* Adjust left position for larger screens */
+        top: 67%; 
+        left: 85%; 
+        transform: translateX(-50%); 
     }
 
     .nt_button{
         top: 133%;
-        left: 39%;
+        left: 50%;
+        transform: translateX(-50%); 
     }
 
 }
